@@ -2,6 +2,14 @@ package Driver;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -26,7 +34,28 @@ public class Driver {
         bigPanel.setLayout(new BoxLayout(bigPanel, BoxLayout.Y_AXIS));
         
         // print hello in frame
-        JLabel emptyLabel = new JLabel("SOLITAIRE");
+       
+    	Font font;
+    	JLabel emptyLabel = new JLabel("Solitaire");
+		try {
+			InputStream myStream = new BufferedInputStream(new FileInputStream("/Users/claireshenoi/Desktop/javasolitaire/javasolitaire/src/main/resources/Merriweather/Merriweather-Bold.ttf"));
+			font = Font.createFont(Font.TRUETYPE_FONT, myStream);
+			font = font.deriveFont(24f);
+			emptyLabel.setFont(font);
+		} catch (FontFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+        //Derive and return a 12 pt version:
+        //Need to use float otherwise
+        //it would be interpreted as style
+
+        
+  
+        
+       
+       
         // create play button
         JButton emptyButton = new JButton("Play Now!");
         JButton emptyButton2 = new JButton("Instructions!");
