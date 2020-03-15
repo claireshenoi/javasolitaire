@@ -83,25 +83,7 @@ public class Card extends JPanel{
 		}
 		System.out.println(res + " ");
 	}
-	public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
-        var center = new Point(getWidth() / 2 , getHeight() / 2 );
-        var radius = Math.min(getWidth() / 2, getHeight() / 2) - 5;
-       
-        var innerRadius = (int)(radius * 0.9);
-        var barWidth = (int)(innerRadius * 1.4);
-        var barHeight = (int)(innerRadius * 2);
-
-        g.setColor(Color.WHITE);
-        
-        g.fillRect(center.x - barWidth/2 , center.y - barHeight/2 , barWidth, barHeight);
-        g.setColor(Color.BLACK);
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 15)); 
-        g.drawString( this.num ,center.x - barWidth/3,center.y - barHeight/3 );
-        g.drawString( this.num ,center.x + barWidth/3,center.y + barHeight/3 );
-    }
-
+	
 	
 	// This function compares two cards
 	public boolean equals(Card q) {

@@ -135,30 +135,7 @@ public class Hand extends JPanel {
 		
 	}
 	
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		
-		for(int i = 0; i < num; i++) {
-			this.add(deck[i]);
-		}
-		/*var center = new Point(getWidth() / 2 , getHeight() / 2 );
-        var radius = Math.min(getWidth() / 2, getHeight() / 2) - 5;
-       
-        var innerRadius = (int)(radius * 0.9);
-        var barWidth = (int)(innerRadius * 1.4);
-        var barHeight = (int)(innerRadius * 2);
-
-        g.setColor(Color.WHITE);
-        
-        g.fillRect(center.x - barWidth/2 , center.y - barHeight/2 , barWidth, barHeight);
-        g.setColor(Color.BLACK);
-*/
-      
-
-    
- 
-       
-    }
+	
 	
 	public int sumHand() {
 		int s = 0 ; 

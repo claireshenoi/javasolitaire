@@ -65,22 +65,7 @@ public class Deck extends JPanel{
 		}		
 	}
 	
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-
-        var center = new Point(getWidth() / 2 , getHeight() / 2 );
-        var radius = Math.min(getWidth() / 2, getHeight() / 2) - 5;
-       
-        var innerRadius = (int)(radius * 0.9);
-        var barWidth = (int)(innerRadius * 1.4);
-        var barHeight = (int)(innerRadius * 2);
-
-        g.setColor(Color.BLACK);
-        
-        g.fillRect(center.x - barWidth/2 , center.y - barHeight/2 , barWidth, barHeight);
-       
-       
-    }
+	
 	public Card getTop() {
 		Card d =  this.deck[pos];
 		pos ++; 
