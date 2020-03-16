@@ -41,7 +41,8 @@ public class StartPanel extends JPanel {
 	    // print hello in frame
 	    emptyLabel = new JLabel("Solitaire");
 		try {
-			InputStream myStream = new BufferedInputStream(new FileInputStream("/Users/claireshenoi/Desktop/javasolitaire/javasolitaire/src/main/resources/Merriweather/Merriweather-Bold.ttf"));
+			InputStream myStream = new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Merriweather/Merriweather-Bold.ttf"));
+					
 			font = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			font = font.deriveFont(24f);
 			emptyLabel.setFont(font);
@@ -82,6 +83,7 @@ public class StartPanel extends JPanel {
         add(pan1);
         
     }
+
     
 
     
