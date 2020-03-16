@@ -83,6 +83,7 @@ public class StartPanel extends JPanel {
         add(pan1);
         
     }
+
     
 
     
