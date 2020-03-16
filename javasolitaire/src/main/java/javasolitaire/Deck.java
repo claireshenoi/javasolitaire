@@ -65,7 +65,6 @@ public class Deck extends JPanel{
 		}		
 	}
 	
-	
 	public Card getTop() {
 		Card d =  this.deck[pos];
 		pos ++; 

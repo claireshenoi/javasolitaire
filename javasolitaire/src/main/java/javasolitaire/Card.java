@@ -83,7 +83,7 @@ public class Card extends JPanel{
 		}
 		System.out.println(res + " ");
 	}
-	
+   
 	
 	// This function compares two cards
 	public boolean equals(Card q) {

@@ -136,7 +136,6 @@ public class Hand extends JPanel {
 	}
 	
 	
-	
 	public int sumHand() {
 		int s = 0 ; 
 		for(int i = 0;i < num; i++) {
