@@ -1,10 +1,13 @@
 package Panels;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Font;
 import java.awt.FontFormatException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -21,6 +24,8 @@ public class Instructions extends JPanel {
 	JLabel rul;
 	JPanel emptyPanel; 
 	Font font;
+	JLabel sp;
+	JButton goBack;
 	public Instructions(final Driver d){
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		emptyPanel = new JPanel();
@@ -39,11 +44,20 @@ public class Instructions extends JPanel {
 		spac = new JLabel(" ");
 		rule = new JLabel("HOW-TO-PLAY: The player may transfer the top card or stack of faced up cards to any of the piles in an attempt to create the sequence of descending value and alternating color. An empty spot in the Tableau may be filled with a king.");
 		rul = new JLabel("If the player cannot move any cards within the Tableau, 3 cards are selected from the top of the Stock pile to form the Talon. If the first card in the Talon cannot be played, 3 more cards are selected from the Stock. When and if the Stock runs out, the Talon is reshuffled to form a new Stock and the process continues.");
+		sp = new JLabel(" ");
+		goBack = new JButton("Go Back to Home Screen");
+		goBack.addActionListener(new ActionListener() {
+	    	 public void actionPerformed(ActionEvent e) {
+	                d.setOptionSelected(0);
+	            }
+	    });
 		add(emptyLabel);
 		add(spac);
 		add(mpty);
 		add(rule);
 		add(rul);
+		add(sp);
+		add(goBack);
 		
 		
 	}
