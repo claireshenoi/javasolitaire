@@ -46,9 +46,12 @@ public class StartPanel extends JPanel {
 			font = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			font = font.deriveFont(24f);
 			emptyLabel.setFont(font);
-		} catch (FontFormatException | IOException e) {
+		} catch ( IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (FontFormatException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 	
 	

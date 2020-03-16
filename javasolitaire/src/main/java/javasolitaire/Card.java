@@ -18,6 +18,9 @@ public class Card {
 	boolean isFaceUp; 
 	
 	
+	public Card() {
+		//Creates a blank card
+	}
 	public Card(String n, Suit s){
 		this.num = n; 
 		this.s = s; 

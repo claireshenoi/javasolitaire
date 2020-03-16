@@ -35,9 +35,12 @@ public class Instructions extends JPanel {
 			font = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			font = font.deriveFont(16f);
 			emptyLabel.setFont(font);
-		} catch (FontFormatException | IOException e) {
+		} catch (FontFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		space = new JLabel(" ");
 		mpty = new JLabel("GOAL: Sort all cards in their respected suit and in numerical order in the 5-minute period. ");

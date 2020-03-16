@@ -16,5 +16,6 @@ public class Diamond extends Suit {
 			e.printStackTrace();
 		} 
 	}
+	
 
 }
