@@ -12,8 +12,9 @@ public class Game extends JPanel {
 		g = new SGame();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		panel1 = new JPanel();
-		add(panel2);
-		add(panel3);
+
+	
 		
 		 
 	}
+}

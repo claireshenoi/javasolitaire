@@ -31,7 +31,7 @@ public class Instructions extends JPanel {
 		emptyPanel = new JPanel();
 		emptyLabel = new JLabel("INSTRUCTIONS");
 		try {
-			InputStream myStream = new BufferedInputStream(new FileInputStream("/Users/claireshenoi/Desktop/javasolitaire/javasolitaire/src/main/resources/Merriweather/Merriweather-Bold.ttf"));
+			InputStream myStream = new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Merriweather/Merriweather-Bold.ttf"));
 			font = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			font = font.deriveFont(16f);
 			emptyLabel.setFont(font);
