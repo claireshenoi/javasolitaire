@@ -18,7 +18,7 @@ public class Card {
 	boolean isFaceUp; 
 	
 	
-	Card(String n, Suit s){
+	public Card(String n, Suit s){
 		this.num = n; 
 		this.s = s; 
 		this.isFaceUp = false; 

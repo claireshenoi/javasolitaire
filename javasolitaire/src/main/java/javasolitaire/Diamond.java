@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Diamond extends Suit {
-	Diamond(){
+	public Diamond(){
 		this.name = "Diamond";
 		this.isBlack = false; 
 		try {

@@ -5,6 +5,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
+import javasolitaire.Card;
+import javasolitaire.Diamond;
 import javasolitaire.SGame;
 
 public class Game extends JPanel {
@@ -16,7 +18,7 @@ public class Game extends JPanel {
 	JPanel panel4;
 	JLabel first;
 	JLabel second;
-	JLabel third;
+	ICard c; 
 	public Game(){
 		g = new SGame();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -26,10 +28,10 @@ public class Game extends JPanel {
 		panel4 = new JPanel();
 		first = new JLabel("Panel 1");
 		second = new JLabel("Panel 2");
-		third = new JLabel("Panel 3");
+		c = new ICard(new Card("King", new Diamond()));
 		panel2.add(first);
 		panel3.add(second);
-		panel4.add(third);
+		panel4.add(c);
 		add(panel2);
 		add(panel3);
 		add(panel4);
