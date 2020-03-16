@@ -10,7 +10,7 @@ public class Spade extends Suit {
 		this.name = "Spade";
 		this.isBlack = true; 
 		try {
-			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Card_spade.svg")));
+			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("download-1.png")));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

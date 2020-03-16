@@ -23,22 +23,23 @@ public class ICard extends JPanel{
 
 	public ICard(Card q) {
 		this.c = q; 
+		setComponent();
+		
+	}
+	public void toggleVisible(boolean b) {
+		this.c.setIsFaceUp(b);
+		setComponent();
+		this.revalidate();
+	}
+	public void setComponent() {
 		Suit w = c.getS();
-		/*BufferedImage i = w.getSuit();
-		if (i == null) {
-			try {
-				System.out.println("Its null");
-				i = ImageIO.read(new File("/Users/samshenoi/Desktop/javasolitaire/javasolitaire/src/main/resources/Card_diamond.svg"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		BufferedImage i = w.getSuit();
+		
 		
 		// Init the picture to the suit picture
 		pic = new JLabel(new ImageIcon(i));
 		num = new JLabel(c.getNum());
-		*/
+	
 		try {
 			cardBack = new JLabel(new ImageIcon(ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("playing-card-back.jpg")))));
 		} catch (IOException e) {
@@ -46,12 +47,14 @@ public class ICard extends JPanel{
 			e.printStackTrace();
 		}
 		
-		if (false) {//c.getIsFaceUp()) {
+		
+		/*if (c.getIsFaceUp()) {
 			//Display the stuff 
 		}else {
 			//Display 
 			add(cardBack);
-		}
+		}*/
+		
 	}
 
 }

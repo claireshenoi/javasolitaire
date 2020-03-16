@@ -11,7 +11,7 @@ public class Club extends Suit {
 		this.name = "Club";
 		this.isBlack = true; 
 		try {
-			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Card_club.svg")));
+			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("download.png")));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

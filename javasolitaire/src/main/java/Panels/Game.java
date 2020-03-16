@@ -49,55 +49,18 @@ public class Game extends JPanel {
 		panel4 = new JPanel();
 		first = new JLabel("Panel 1");
 		second = new JLabel("Panel 2");
-		third = new JLabel("Time");
 		
-		panel4.setLayout(new GridBagLayout());
-		timer = new Timer(10, new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if(startTime < 0) {
-					startTime = System.currentTimeMillis();
-				}
-				long now = System.currentTimeMillis();
-				long clockTime = now - startTime;
-				if(clockTime >= duration) {
-					clockTime = duration;
-					timer.stop();
-				}
-				SimpleDateFormat df = new SimpleDateFormat("mm:ss:SSS");
-				label.setText(df.format(duration - clockTime));
-			}
+		panel2.add(first);
+		panel3.add(second);
+		ICard c = new ICard(new Card("2",new Diamond()));
+		c.toggleVisible(true);
+		panel4.add(c);
+		add(panel2);
+		add(panel3);
+		add(panel4);
+					
 			
-		});
-		timer.setInitialDelay(0);
-		addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(!timer.isRunning()) {
-					startTime = -1;
-					timer.start();
-				}
-			}
-			 
-		});
-		label = new JLabel("...");
-		add(label);
-	}
-		@Override
-		public Dimension getPreferredSize() {
-			return new Dimension(200,200);
+		
 		}
-	
-
-panel2.add(first);
-panel3.add(second);
-panel4.add(third);
-add(panel2);
-add(panel3);
-add(panel4);
-			
-	
-
-}
 }

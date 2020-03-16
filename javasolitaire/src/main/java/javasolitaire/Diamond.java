@@ -10,7 +10,7 @@ public class Diamond extends Suit {
 		this.name = "Diamond";
 		this.isBlack = false; 
 		try {
-			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Card_diamond.svg")));
+			this.suit = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("Card_diamond.svg.png")));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
