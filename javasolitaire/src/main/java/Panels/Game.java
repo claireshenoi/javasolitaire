@@ -32,33 +32,33 @@ public class Game extends JPanel {
 	private long duration = 5000;
 	
 	private JLabel label;
-	
-	JPanel panel1; 
-	JPanel panel2;
-	JPanel panel3; 
-	JPanel panel4;
-	JLabel first;
-	JLabel second;
-	JLabel third; 
+	JPanel [] panels;
+
 	public Game(){
 		g = new SGame();
-		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		panel1 = new JPanel();
-		panel2 = new JPanel();
-		panel3 = new JPanel();
-		panel4 = new JPanel();
-		first = new JLabel("Panel 1");
-		second = new JLabel("Panel 2");
+		panels = new JPanel [3];
 		
-
-		panel2.add(first);
-		panel3.add(second);
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		panels[0] = new TopPanel();
+		panels[1] = new MiddlePannel();
+		panels[2] = new BottomPanel();
+		
+		
+		
+	
+		
 		ICard c = new ICard(new Card("2",new Diamond()));
 		c.toggleVisible(true);
-		panel4.add(c);
-		add(panel2);
-		add(panel3);
-		add(panel4);
+		
+
+		
+		for(int i = 0; i < panels.length; i++)
+		{
+				add(panels[i]);
+		}
+		
+
+		
 					
 			
 		
