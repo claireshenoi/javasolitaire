@@ -2,6 +2,7 @@
 // Description: This file defines the facedown deck.
 package Panels;
 
+import java.awt.Dimension;
 import java.awt.LayoutManager;
 
 import javax.swing.JPanel;
@@ -16,11 +17,18 @@ public class IDeck extends JPanel {
 	public IDeck(Deck d) {
 		deck = d; 
         top = new ICard(deck.getTop());
+        top.toggleVisible(false);
+        add(top);
 		
 	}
 	public ICard drawCard() {
 		top = new ICard(deck.getTop()); 
 		return top;
 	}
+	 @Override
+	    public Dimension getPreferredSize() {
+	        return new Dimension(200, 200);
+	    }
+	
 
 }

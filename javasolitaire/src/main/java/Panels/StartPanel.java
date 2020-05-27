@@ -1,5 +1,6 @@
 package Panels;
 
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.event.ActionEvent;
@@ -87,7 +88,12 @@ public class StartPanel extends JPanel {
         
     }
 
-    
+	 @Override
+	    public Dimension getPreferredSize() {
+	        return new Dimension(1000, 1000);
+	    }
+	
+
 
     
 

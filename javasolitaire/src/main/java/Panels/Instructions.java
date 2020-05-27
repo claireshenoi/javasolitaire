@@ -4,6 +4,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.event.ActionEvent;
@@ -64,5 +66,10 @@ public class Instructions extends JPanel {
 		
 		
 	}
+	 @Override
+	    public Dimension getPreferredSize() {
+	        return new Dimension(1000, 1000);
+	    }
+	
 
 }

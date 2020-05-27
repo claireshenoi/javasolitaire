@@ -13,6 +13,7 @@ public class SGame {
 		List<Card> test = d.getDeck();
 		
 	}
+	public Deck getDeck() { return d; }
 	void initGame(){
 		List<List<Card>> h = new ArrayList(); 
 		for (int i = 0; i< 8; i++) {

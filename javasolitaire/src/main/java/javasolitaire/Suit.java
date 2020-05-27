@@ -14,7 +14,9 @@ public class Suit {
 	String name; 
 	boolean isBlack; 
 	
-    Suit(){
+    public Suit(){
+    
+    	
     }
 
 	public BufferedImage getSuit() {

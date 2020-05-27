@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Heart extends Suit {
-   Heart(){
+   public Heart(){
 	    this.name = "Heart";
 	    this.isBlack = false; 
 		try {

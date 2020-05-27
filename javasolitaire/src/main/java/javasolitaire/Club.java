@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 
 public class Club extends Suit {
 	
-	Club(){
+	public Club(){
 		this.name = "Club";
 		this.isBlack = true; 
 		try {

@@ -33,7 +33,7 @@ public class Driver {
 		optionSelected = 0; 
 		startPage = new StartPanel(this); 
 		instructions = new Instructions(this);
-		game = new Game(); 
+		game = new Game(this); 
 		
 		
 	}
