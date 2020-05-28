@@ -17,11 +17,15 @@ public class MiddlePannel extends JPanel {
 			
 			setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 			
-			for (int i =0; i < card.length; i++)
+			card[0] = new IStack();
+			add(card[0]);
+			
+			for (int i =1; i < card.length; i++)
 			{
 				card[i] = new JPanel(); 
 				card[i].add(new JLabel("Panel" + i));
 				add(card[i]);
+				
 			}
 			
 		}
