@@ -33,6 +33,7 @@ public class MiddlePannel extends JPanel {
 			
 		}
 
+	    //Add cards to the stack
 		public void addCards(List<ICard> cards) {
 			stack.addToStack(cards);
 			
