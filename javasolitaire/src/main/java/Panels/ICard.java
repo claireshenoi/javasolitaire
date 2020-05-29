@@ -33,9 +33,12 @@ public class ICard extends JPanel{
 	}
 	public void toggleVisible(boolean b) {
 		
+        if(c != null) {
+        	this.c.setIsFaceUp(b);
+    		
+        }
+        setComponent();
 		
-		this.c.setIsFaceUp(b);
-		setComponent();
 		
 	}
 	public void setComponent() {
@@ -54,7 +57,10 @@ public class ICard extends JPanel{
 
 		
 		//Depending on if the card is faceup or not do something 
-		if (this.c.getIsFaceUp()) {
+	    if (this.c == null) {
+	    	add(new JLabel("Top"));
+	    }
+		else if (this.c.getIsFaceUp()) {
 			Suit w = c.getS();
 			BufferedImage i = w.getSuit();
 			setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));

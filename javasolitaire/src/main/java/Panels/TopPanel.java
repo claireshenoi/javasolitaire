@@ -40,7 +40,11 @@ public class TopPanel extends JPanel {
                // When this panel is clicked, we want to draw a card 
                List<ICard> topThree  = new ArrayList<ICard>(); 
                for(int i = 0; i < 3; i++) {
-            	   topThree.add(deck.drawCard());
+            	   ICard d = deck.drawCard();
+            	   if(d != null) {
+            		   topThree.add(d);
+            	   }
+            	   
                }
                
                game.moveCards(topThree);
