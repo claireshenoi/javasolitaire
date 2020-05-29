@@ -65,6 +65,7 @@ public class IStack extends JPanel{
 		
     	for(int i = 0; i < deck.size(); i++)
     	{
+ 
     		deck.get(i).toggleVisible(true);
     		stack.add(deck.get(i));
     	}

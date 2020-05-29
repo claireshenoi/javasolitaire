@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
+import javasolitaire.Card;
 import javasolitaire.Deck;
 
 // This file defines an interface for the facedown deck. 
@@ -26,7 +27,12 @@ public class IDeck extends JPanel {
 		
 	}
 	public ICard drawCard() {
-		top = new ICard(deck.getTop()); 
+		Card c = deck.getTop();
+		top = null; 
+		if (c != null) {
+			top = new ICard(deck.getTop());
+		}
+		 
 		return top;
 	}
 	@Override

@@ -59,7 +59,7 @@ public class Game extends JPanel {
 	}
 
 	public void moveCards(List<ICard> cards) {
-		System.out.println(cards.get(0));
+		
 	    mid.addCards(cards);
 	}
 	 @Override

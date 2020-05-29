@@ -5,7 +5,9 @@ package javasolitaire;
 import java.lang.Math;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -21,24 +23,30 @@ import javax.swing.JPanel;
 
 public class Deck{
 	//Data Abstraction 
-	List<Card> deck; 
-	int pos;
+	
+	private Queue<Card> deck;
+	private int pos;
 	final int DECK_SIZE = 52; 
 
 	public Deck(){
+		deck = new LinkedList<Card>();
 		Suit s [] = {new Diamond(), new Spade(), new Club(), new Heart() }; 
-		deck = new ArrayList<Card>(); 
+		List<Card> arr = new ArrayList<Card>(); 
 		for (int y=0; y < 4; y++) {
-			deck.add(new Card("Ace", s[y]));
+			arr.add(new Card("Ace", s[y]));
 			for (int i = 2; i < 11; i ++) {
-				deck.add(new Card("" + i , s[y]));
+				arr.add(new Card("" + i , s[y]));
 			}
-			deck.add(new Card("King", s[y]));
-			deck.add(new Card("Jack", s[y]));
-			deck.add(new Card("Queen", s[y]));	
+			arr.add(new Card("King", s[y]));
+			arr.add(new Card("Jack", s[y]));
+			arr.add(new Card("Queen", s[y]));	
 		}
 		// Shuffle the deck after creating it; 
-		this.shuffle();
+		Collections.shuffle(arr);
+		
+		for(int i =0; i < arr.size();i++) {
+			deck.add(arr.get(i));
+		}
 		
 		// Set the top card equal to the start index
 		this.pos = 0; 
@@ -46,22 +54,12 @@ public class Deck{
 	}
 	
 	public Card getTop() {
-		
-		
-		
-		Card c = this.deck.get(this.pos++); 
-	
-		return c;
+		// returns the top card of the queue or null if empty
+		return deck.poll();
 	}
 	
-	
-	// Shuffle the deck 
-	public void shuffle(){
-		Collections.shuffle(deck);
-	}
-	List<Card> getDeck(){
-		return deck; 
-	}
+
+ 
 	
 
 
