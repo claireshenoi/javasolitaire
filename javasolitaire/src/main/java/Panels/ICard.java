@@ -45,7 +45,7 @@ public class ICard extends JPanel{
 		for(Component c : componentList){
 
 		    //Find the components you want to remove
-		    if(c instanceof ICard){
+		    if(c instanceof ICard || c instanceof JLabel){
 
 		        //Remove it
 		        this.remove(c);
@@ -98,6 +98,10 @@ public class ICard extends JPanel{
 	    public Dimension getPreferredSize() {
 	        return new Dimension(200, 200);
 	    }
+	@Override
+	public String toString() {
+		return "ICard [c=" + c + "]";
+	}
 	
-
+    
 }

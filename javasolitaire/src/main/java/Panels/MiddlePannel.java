@@ -1,15 +1,18 @@
 package Panels;
 
-	import javax.swing.BoxLayout;
+	import java.util.List;
+
+import javax.swing.BoxLayout;
 	import javax.swing.JLabel;
 	import javax.swing.JPanel;
 
-	import javasolitaire.SGame;
+
 
 public class MiddlePannel extends JPanel {
 
 		private JLabel label;
 		JPanel [] card;
+		private IStack stack; 
 
 		public MiddlePannel(){
 			
@@ -17,8 +20,8 @@ public class MiddlePannel extends JPanel {
 			
 			setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 			
-			card[0] = new IStack();
-			add(card[0]);
+			stack = new IStack();
+			add(stack);
 			
 			for (int i =1; i < card.length; i++)
 			{
@@ -27,6 +30,11 @@ public class MiddlePannel extends JPanel {
 				add(card[i]);
 				
 			}
+			
+		}
+
+		public void addCards(List<ICard> cards) {
+			stack.addToStack(cards);
 			
 		}
 	}

@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Driver.Driver;
-import javasolitaire.SGame;
+
 public class Timer extends JPanel {
 
 	private JLabel label;

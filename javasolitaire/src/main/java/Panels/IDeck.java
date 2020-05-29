@@ -4,6 +4,8 @@ package Panels;
 
 import java.awt.Dimension;
 import java.awt.LayoutManager;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
@@ -19,16 +21,18 @@ public class IDeck extends JPanel {
         top = new ICard(deck.getTop());
         top.toggleVisible(false);
         add(top);
+        
+       
 		
 	}
 	public ICard drawCard() {
 		top = new ICard(deck.getTop()); 
 		return top;
 	}
-	 @Override
-	    public Dimension getPreferredSize() {
+	@Override
+	public Dimension getPreferredSize() {
 	        return new Dimension(200, 200);
-	    }
+	}
 	
 
 }

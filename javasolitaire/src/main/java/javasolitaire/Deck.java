@@ -25,7 +25,7 @@ public class Deck{
 	int pos;
 	final int DECK_SIZE = 52; 
 
-	Deck(){
+	public Deck(){
 		Suit s [] = {new Diamond(), new Spade(), new Club(), new Heart() }; 
 		deck = new ArrayList<Card>(); 
 		for (int y=0; y < 4; y++) {

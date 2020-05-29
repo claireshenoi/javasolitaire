@@ -9,7 +9,7 @@ import javasolitaire.Card;
 import javasolitaire.Club;
 import javasolitaire.Diamond;
 import javasolitaire.Heart;
-import javasolitaire.SGame;
+
 import javasolitaire.Spade;
 import javasolitaire.Suit;
 
