@@ -61,5 +61,7 @@ public class TopPanel extends JPanel {
 			add(cardz[i]);
 		}
 	}
+	
+	
 }
 

@@ -46,12 +46,11 @@ public class Deck{
 	}
 	
 	public Card getTop() {
+		
+		
+		
 		Card c = this.deck.get(this.pos++); 
-		if(pos > DECK_SIZE) {
-			c = new Card();
-		}else {
-			c = this.deck.get(this.pos++); 
-		}
+	
 		return c;
 	}
 	
