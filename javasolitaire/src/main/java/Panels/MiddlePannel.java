@@ -94,6 +94,10 @@ public class MiddlePannel extends JPanel {
 				add(card[6]);
 		
 		}
+		
+		
+		// Init board
+		
 
 	    //Add cards to the stack
 		public void addCards(List<ICard> cards) {

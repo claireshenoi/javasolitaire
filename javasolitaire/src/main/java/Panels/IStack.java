@@ -63,6 +63,7 @@ public class IStack extends JPanel{
 	public void addToStack(List<ICard>deck)
     {
 		
+		
     	for(int i = 0; i < deck.size(); i++)
     	{
  
