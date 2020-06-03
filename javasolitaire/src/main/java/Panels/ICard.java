@@ -57,13 +57,14 @@ public class ICard extends JPanel{
 
 		
 		//Depending on if the card is faceup or not do something 
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 	    if (this.c == null) {
 	    	add(new JLabel("Top"));
 	    }
 		else if (this.c.getIsFaceUp()) {
 			Suit w = c.getS();
 			BufferedImage i = w.getSuit();
-			setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+			
 			
 			// Init the picture to the suit picture
 			
@@ -79,8 +80,8 @@ public class ICard extends JPanel{
 		}else {
 			try {
 				Image img = ImageIO.read(new BufferedInputStream(getClass().getClassLoader().getResourceAsStream("playing-card-back.jpg")));
-				img.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-				add(new JLabel(new ImageIcon(img)));
+				Image modifiedImage = img.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+				add(new JLabel(new ImageIcon(modifiedImage)));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -102,7 +103,7 @@ public class ICard extends JPanel{
 	}
 	 @Override
 	    public Dimension getPreferredSize() {
-	        return new Dimension(200, 200);
+	        return new Dimension(100, 100);
 	    }
 	@Override
 	public String toString() {

@@ -35,6 +35,7 @@ public class TopPanel extends JPanel {
 		
 		// Add a mouse listener for the when this panel is clicked
 		cardz[0].addMouseListener(new MouseAdapter() {
+			
             @Override
             public void mousePressed(MouseEvent e) {
                // When this panel is clicked, we want to draw a card 
@@ -65,7 +66,9 @@ public class TopPanel extends JPanel {
 			add(cardz[i]);
 		}
 	}
-	
+	public IDeck getIDeck() {
+		return deck;
+	}
 	
 }
 

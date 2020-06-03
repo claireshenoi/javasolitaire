@@ -47,14 +47,12 @@ public class Game extends JPanel {
 		mid = new MiddlePannel();
 		bot = new BottomPanel(b);
 		
-		ICard c = new ICard(new Card("2",new Diamond()));
-		c.toggleVisible(true);
-	
 		
 		//Add to the main panel
 		add(top);
 		add(mid);
 		add(bot);
+		mid.initBoard(top.getIDeck());
 		
 	}
 

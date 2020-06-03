@@ -54,6 +54,7 @@ public class Deck{
 	}
 	
 	public Card getTop() {
+		System.out.println(deck.size());
 		// returns the top card of the queue or null if empty
 		return deck.poll();
 	}

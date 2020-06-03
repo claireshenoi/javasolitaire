@@ -27,8 +27,7 @@ public class IDeck extends JPanel {
 		
 	}
 	public ICard drawCard() {
-		Card c = deck.getTop();
-		top = null; 
+		ICard c = top; 
 		if (c != null) {
 			top = new ICard(deck.getTop());
 		}
