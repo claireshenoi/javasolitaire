@@ -5,6 +5,8 @@ package Panels;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -20,7 +22,7 @@ import javax.swing.SwingConstants;
 import javasolitaire.Card;
 import javasolitaire.Suit;
 
-public class ICard extends JPanel{
+public class ICard extends JPanel {
 	Card c; 
 	JLabel num; 
 	JLabel pic; 
@@ -30,6 +32,8 @@ public class ICard extends JPanel{
 		this.c = q; 
 		setComponent();
 		
+		/*
+		*/
 	}
 	public void toggleVisible(boolean b) {
 		
@@ -109,6 +113,9 @@ public class ICard extends JPanel{
 	public String toString() {
 		return "ICard [c=" + c + "]";
 	}
+
+
+	
 	
     
 }

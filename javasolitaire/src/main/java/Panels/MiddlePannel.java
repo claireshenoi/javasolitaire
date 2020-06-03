@@ -1,6 +1,8 @@
 package Panels;
 
-	import java.util.List;
+	import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.util.List;
 
 import javax.swing.BoxLayout;
 	import javax.swing.JLabel;
@@ -45,10 +47,35 @@ public class MiddlePannel extends JPanel {
 				for(int j = 0; j<i; j++)
 				{
 					num ++; 
-					ICard s = d.drawCard();
+					final ICard s = d.drawCard();
 					if(j == i -1) {
 						s.toggleVisible(true);
+						s.addMouseMotionListener(new MouseMotionListener() {
+
+							public void mouseDragged(MouseEvent e) {
+								// TODO Auto-generated method stub
+								int mouseX = e.getX();
+						        int mouseY = e.getY();
+						        s.setBounds(mouseX, mouseY, 100, 50);
+								System.out.println("Moved");
+								
+								
+							}
+
+							public void mouseMoved(MouseEvent e) {
+								// TODO Auto-generated method stub
+								//System.out.println("Moved");
+								
+								
+								
+								
+							}
+
+						
+							
+						});
 					}
+					
 					card[i].add(s);
 					
 				}	
